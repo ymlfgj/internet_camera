@@ -1,0 +1,37 @@
+###########################################################
+#CAMERA MAKEFILE
+#AUTHOR: YANG MENG
+#DATE:	2012-09-10
+###########################################################
+
+#PROJECT PATH CONFIGS
+PROJECT_DIR			?=/mnt/hgfs/arm_share/Camera_arm
+OBJECTS_DIR			= $(PROJECT_DIR)/objects
+SOURCE_DIR			= $(PROJECT_DIR)/source
+BUILD_DIR			= $(PROJECT_DIR)/Build
+
+#COMPILE CONFIGS
+COMPILE                         = arm-linux-
+CC	  			= $(COMPILE)gcc
+AR				= $(COMPILE)ar
+LD				= $(COMPILE)ld
+CFLAGS				= -Wall -O2 -D_REENTRANT -fno-signed-char -DARM_BOARD
+CFLAGS			   += $(shell ${COMPILE}pkg-config --cflags sdl)  
+INCLUDE_DIR			= -I. -I /usr/local/include -I $(PROJECT_DIR)/include
+LIB_OBJECTS			= -L /opt/usr_arm/lib -lSDL -lpthread 
+MK				= make
+TARGET				= $(BUILD_DIR)/CAMERA_arm
+
+include Makefile.include
+include Makefile.rule
+
+all:
+	rm -rf $(OBJECTS_DIR)
+	mkdir -p $(OBJECTS_DIR)
+	$(MK) $(TARGET)
+
+clean distclean:
+	rm -f $(OBJECTS_DIR)/*.o $(TARGET)
+
+
+

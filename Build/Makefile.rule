@@ -1,0 +1,56 @@
+#Makefile for the detail rule
+
+$(TARGET):$(OBJECTS)
+	$(CC) $(LIB_OBJECTS) $(OBJECTS) -o $@
+
+$(OBJECTS_DIR)/Main.o:$(SOURCE_DIR)/main.c 
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
+$(OBJECTS_DIR)/SysMain.o:$(SOURCE_DIR)/SysMain.c 
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+	
+$(OBJECTS_DIR)/BmpUtil.o:$(SOURCE_DIR)/BmpUtil.c 
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+	
+$(OBJECTS_DIR)/VideoCapture.o:$(SOURCE_DIR)/VideoCapture.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+	
+$(OBJECTS_DIR)/VideoUtil.o:$(SOURCE_DIR)/VideoUtil.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
+$(OBJECTS_DIR)/GrEngine.o:$(SOURCE_DIR)/GrEngine.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
+$(OBJECTS_DIR)/ThreadBase.o:$(SOURCE_DIR)/ThreadBase.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
+$(OBJECTS_DIR)/SocketClient.o:$(SOURCE_DIR)/SocketClient.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
+$(OBJECTS_DIR)/SocketServer.o:$(SOURCE_DIR)/SocketServer.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
+$(OBJECTS_DIR)/AppManager.o:$(SOURCE_DIR)/AppManager.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
+$(OBJECTS_DIR)/AppCamera.o:$(SOURCE_DIR)/AppCamera.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
+$(OBJECTS_DIR)/AppSocketClient.o:$(SOURCE_DIR)/AppSocketClient.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
+$(OBJECTS_DIR)/AppSocketServer.o:$(SOURCE_DIR)/AppSocketServer.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
+$(OBJECTS_DIR)/SysMessageQueue.o:$(SOURCE_DIR)/SysMessageQueue.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
+$(OBJECTS_DIR)/SysTimer.o:$(SOURCE_DIR)/SysTimer.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
+$(OBJECTS_DIR)/SysKey.o:$(SOURCE_DIR)/SysKey.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
+$(OBJECTS_DIR)/Debug.o:$(SOURCE_DIR)/Debug.c
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+	

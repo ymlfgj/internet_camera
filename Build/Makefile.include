@@ -1,0 +1,23 @@
+OBJECTS= \
+$(OBJECTS_DIR)/Main.o \
+$(OBJECTS_DIR)/SysMain.o \
+$(OBJECTS_DIR)/BmpUtil.o \
+$(OBJECTS_DIR)/VideoCapture.o \
+$(OBJECTS_DIR)/VideoUtil.o \
+$(OBJECTS_DIR)/GrEngine.o \
+$(OBJECTS_DIR)/ThreadBase.o \
+$(OBJECTS_DIR)/SocketClient.o \
+$(OBJECTS_DIR)/SocketServer.o \
+$(OBJECTS_DIR)/AppManager.o \
+$(OBJECTS_DIR)/AppCamera.o \
+$(OBJECTS_DIR)/AppSocketClient.o \
+$(OBJECTS_DIR)/AppSocketServer.o \
+$(OBJECTS_DIR)/SysMessageQueue.o \
+$(OBJECTS_DIR)/SysTimer.o \
+$(OBJECTS_DIR)/SysKey.o \
+$(OBJECTS_DIR)/Debug.o
+
+
+
+
+
