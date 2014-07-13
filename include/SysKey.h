@@ -76,7 +76,7 @@ void*SysCheckKey(void *arg);
 
 
 
-
+void debuginformation(void);
 
 
 

@@ -14,6 +14,10 @@ void*CameraThread(void *arg);
 
 
 
+void debuginformation(void);
+
+
+
 
 
 
